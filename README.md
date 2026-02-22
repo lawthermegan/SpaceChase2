@@ -5,4 +5,4 @@ GAME OVER VIEW AND RULES/INSTRUCTIONS;
 You control the ufo across the screen with your finger or click and hold with mouse.
 The objective is to catch the ufo. important;
 Strategic game play - 1 move each player, alien move 1 you move 1.
-Machine code understands movement and understands when objects collide resulting in you winning the catch and game over displaying on UI
+Machine code understands movement and understands when objects collide resulting in you winning the catch and 'game over' displaying on UI.
