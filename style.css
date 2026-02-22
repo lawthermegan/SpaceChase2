@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050510;
+  overflow: hidden;
+  touch-action: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#game-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* Galaxy Image */
+  background: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* The Warp Speed Animation */
+.warping {
+  animation: warpDrive 10s infinite linear;
+}
+
+@keyframes warpDrive {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+#ufo, #alien, #explosion {
+  position: absolute;
+  font-size: 60px;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 15px #6c5ce7);
+}
+
+#ufo { z-index: 10; }
+#alien { z-index: 5; transition: all 0.7s ease-in-out; }
+#explosion { display: none; z-index: 15; transform: scale(3); }
+
+#game-over {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 0, 30, 0.95);
+  padding: 40px;
+  border: 4px solid #a29bfe;
+  color: white;
+  text-align: center;
+  z-index: 100;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #6c5ce7;
+}
+
+button {
+  padding: 15px 30px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 5px 0 #4834d4;
+}
+
+button:active { transform: translateY(4px); box-shadow: none; }
